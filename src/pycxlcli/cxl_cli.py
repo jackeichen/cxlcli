@@ -124,12 +124,12 @@ def CXLCli():
     parser_list = subparsers.add_parser('list', help='list all CXL devices on the system')
     parser_list.set_defaults(func=list_cxl_devices)
     parser_list.add_argument("--type", default="cxl_memdev", help="Show devices of specified type")
-    parser_list.add_argument("-o", "--output-format", dest="format", help="Show devices of specified type")
+    parser_list.add_argument("-o", "--output-format", dest="format", help="Output format")
     # create the parser for the "query" command
     parser_query = subparsers.add_parser('query-command', help='query commands for CXL devices')
     parser_query.set_defaults(func=query_commands)
     parser_query.add_argument('device', help='The device path to send command')
-    parser_query.add_argument('-n', '--number', type=int, default=0, help='The device path to send command')
+    parser_query.add_argument('-n', '--number', type=int, default=0, help='number of support commands should return')
     # create the parser for the "identify" command
     parser_query = subparsers.add_parser('identify', help='identify commands for CXL devices')
     parser_query.set_defaults(func=identify)
