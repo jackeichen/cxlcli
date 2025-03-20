@@ -2,6 +2,8 @@ pycxlcli
 ========
 Communicate with CXL device using Linux's inbox device driver.
 
+The tool is a demo now. Consider supporting more functions in the future.
+
 
 License
 =======
@@ -39,12 +41,18 @@ Online build and install from the repository:
     $ pip install .
 
 
+Support
+=======
+Support CXL Memory device. 
+Consider more device type in the future.
+
+
 Usage
 =====
 
 ```
 # pycxl -h
-usage: pycxl [-h] {list,query-command,version,help} ...
+usage: pycxl [-h] {list,query-command,identify,version,help} ...
 
 CXL CLI to get CXL device information
 
@@ -57,6 +65,6 @@ positional arguments:
     version             Shows the program version
     help                Display this help
 
-optional arguments:
+options:
   -h, --help            show this help message and exit
 ```

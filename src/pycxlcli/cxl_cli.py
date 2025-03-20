@@ -142,4 +142,7 @@ def CXLCli():
     parser_help.set_defaults(func=get_help)
     ##
     args = parser.parse_args()
-    sys.exit(args.func(args))
+    if len(sys.argv) > 1:
+        sys.exit(args.func(args))
+    else:
+        sys.exit(get_help(args))
